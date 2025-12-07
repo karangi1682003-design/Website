@@ -1,59 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Payment - Clothing Store</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0; padding: 0;
-    background: #f4f4f4;
-}
-header {
-    background: black;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-}
-form {
-    background: white;
-    width: 400px;
-    margin: 40px auto;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-}
-button {
-    background: black;
-    color: white;
-    padding: 12px;
-    width: 100%;
-    border: none;
-    cursor: pointer;
-}
-</style>
+    <title>Payment - Clothing Store</title>
+
+    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #eeeeee;
+    }
+    header {
+        background: black;
+        color: white;
+        padding: 15px 20px;
+        text-align: center;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    .payment-form {
+        background: white;
+        width: 400px;
+        margin: 40px auto;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+    .payment-form h2 {
+        text-align: center;
+    }
+    .payment-form input {
+        width: 100%;
+        padding: 12px;
+        margin: 12px 0;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+    .payment-form label {
+        font-weight: bold;
+    }
+    button {
+        background: black;
+        color: white;
+        padding: 12px;
+        width: 100%;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+    button:hover {
+        background: #333;
+    }
+    </style>
+
 </head>
 <body>
 
 <header>
-    <h1>Payment</h1>
+    <h1>Checkout</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
     </nav>
 </header>
 
-<form action="thankyou.html" method="get">
+<form class="payment-form" action="thankyou.html" method="get">
     <h2>Payment Details</h2>
 
     <label>Name on Card</label>
