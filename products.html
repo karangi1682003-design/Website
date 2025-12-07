@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Payment - Clothing Store</title>
+    <title>Products - Clothing Store</title>
 
     <style>
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background: #eeeeee;
+        background: #f2f2f2;
     }
     header {
         background: black;
@@ -24,32 +24,31 @@
     nav a:hover {
         text-decoration: underline;
     }
-    .payment-form {
-        background: white;
-        width: 400px;
-        margin: 40px auto;
+    .products-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         padding: 30px;
+    }
+    .card {
+        background: white;
+        width: 260px;
+        padding: 20px;
+        margin: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0,0,0,0.15);
-    }
-    .payment-form h2 {
         text-align: center;
     }
-    .payment-form input {
+    .card img {
         width: 100%;
-        padding: 12px;
-        margin: 12px 0;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-    }
-    .payment-form label {
-        font-weight: bold;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
     }
     button {
         background: black;
         color: white;
-        padding: 12px;
-        width: 100%;
+        padding: 10px 20px;
         border: none;
         cursor: pointer;
         border-radius: 6px;
@@ -63,30 +62,37 @@
 <body>
 
 <header>
-    <h1>Checkout</h1>
+    <h1>Our Products</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
     </nav>
 </header>
 
-<form class="payment-form" action="thankyou.html" method="get">
-    <h2>Payment Details</h2>
+<div class="products-container">
 
-    <label>Name on Card</label>
-    <input type="text" required>
+    <div class="card">
+        <img src="https://via.placeholder.com/260" alt="Jacket">
+        <h3>Men's Jacket</h3>
+        <p>$49.99</p>
+        <a href="payment.html"><button>Add to Cart</button></a>
+    </div>
 
-    <label>Card Number</label>
-    <input type="text" maxlength="16" required>
+    <div class="card">
+        <img src="https://via.placeholder.com/260" alt="Dress">
+        <h3>Women's Dress</h3>
+        <p>$39.99</p>
+        <a href="payment.html"><button>Add to Cart</button></a>
+    </div>
 
-    <label>Expiry Date</label>
-    <input type="month" required>
+    <div class="card">
+        <img src="https://via.placeholder.com/260" alt="T-shirt">
+        <h3>Casual T-Shirt</h3>
+        <p>$19.99</p>
+        <a href="payment.html"><button>Add to Cart</button></a>
+    </div>
 
-    <label>CVV</label>
-    <input type="password" maxlength="3" required>
-
-    <button type="submit">Pay Now</button>
-</form>
+</div>
 
 </body>
 </html>
